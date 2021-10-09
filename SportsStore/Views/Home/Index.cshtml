@@ -1,8 +1,6 @@
-﻿@*<h4>Welcome to SportsStore</h4>*@
+﻿@model ProductsListViewModel
 
-@model IQueryable<Product>
-
-@foreach (var p in Model)
+@foreach (var p in Model.Products)
 {
     <div>
         <h3>@p.Name</h3>
@@ -10,4 +8,6 @@
         <h4>@p.Price.ToString("c")</h4>
     </div>
 }
+
+<div page-model="@Model.PagingInfo" page-action="Index"></div>
 
