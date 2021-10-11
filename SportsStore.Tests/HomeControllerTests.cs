@@ -91,9 +91,9 @@ namespace SportsStore.Tests
             mock.Setup(m => m.Products).Returns((new Product[] {
                 new Product {ProductID = 1, Name = "P1", Category = "Cat1"},
                 new Product {ProductID = 2, Name = "P2", Category = "Cat2"},
-                new Product {ProductID = 3, Name = "P3", Category = "Cat3"},
-                new Product {ProductID = 4, Name = "P4", Category = "Cat4"},
-                new Product {ProductID = 5, Name = "P5", Category = "Cat5"}
+                new Product {ProductID = 3, Name = "P3", Category = "Cat1"},
+                new Product {ProductID = 4, Name = "P4", Category = "Cat2"},
+                new Product {ProductID = 5, Name = "P5", Category = "Cat3"}
             }).AsQueryable<Product>());
 
             HomeController controller = new HomeController(mock.Object);
